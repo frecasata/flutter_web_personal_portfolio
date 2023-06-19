@@ -3,7 +3,6 @@ import 'package:flutter_web_personal_portfolio/screens/home/home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'constants.dart';
-import 'screens/main/main_screen.dart';
 
 void main() {
   runApp(MyApp());
