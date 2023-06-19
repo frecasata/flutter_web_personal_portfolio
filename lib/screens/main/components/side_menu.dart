@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:flutter_web_personal_portfolio/screens/main/components/skills_menu.dart';
+import 'skills_menu.dart';
 import '../../../constants.dart';
 import 'coding.dart';
 import 'knowledge.dart';

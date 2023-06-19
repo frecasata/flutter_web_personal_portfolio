@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:flutter_web_personal_portfolio/responsive.dart';
+import '../../responsive.dart';
 
 import '../../constants.dart';
 import 'components/side_menu.dart';
