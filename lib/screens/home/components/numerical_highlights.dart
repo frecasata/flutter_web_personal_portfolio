@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_personal_portfolio/responsive.dart';
 
 import '../../../components/animated_counter.dart';
 import '../../../constants.dart';
@@ -13,39 +14,83 @@ class NumericalHighlights extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          NumericalHighlight(
-            counter: AnimatedCounter(
-              value: 100,
-              text: "+",
+      child: Responsive.isMobileLarge(context)
+          ? Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    NumericalHighlight(
+                      counter: AnimatedCounter(
+                        value: 100,
+                        text: "+",
+                      ),
+                      label: "Subscribers",
+                    ),
+                    NumericalHighlight(
+                      counter: AnimatedCounter(
+                        value: 100,
+                        text: "+",
+                      ),
+                      label: "Subscribers",
+                    ),
+                  ],
+                ),
+                const SizedBox(height: defaultPadding),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    NumericalHighlight(
+                      counter: AnimatedCounter(
+                        value: 100,
+                        text: "+",
+                      ),
+                      label: "Subscribers",
+                    ),
+                    NumericalHighlight(
+                      counter: AnimatedCounter(
+                        value: 100,
+                        text: "+",
+                      ),
+                      label: "Subscribers",
+                    ),
+                  ],
+                )
+              ],
+            )
+          : Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                NumericalHighlight(
+                  counter: AnimatedCounter(
+                    value: 100,
+                    text: "+",
+                  ),
+                  label: "Subscribers",
+                ),
+                NumericalHighlight(
+                  counter: AnimatedCounter(
+                    value: 100,
+                    text: "+",
+                  ),
+                  label: "Subscribers",
+                ),
+                NumericalHighlight(
+                  counter: AnimatedCounter(
+                    value: 100,
+                    text: "+",
+                  ),
+                  label: "Subscribers",
+                ),
+                NumericalHighlight(
+                  counter: AnimatedCounter(
+                    value: 100,
+                    text: "+",
+                  ),
+                  label: "Subscribers",
+                ),
+              ],
             ),
-            label: "Subscribers",
-          ),
-          NumericalHighlight(
-            counter: AnimatedCounter(
-              value: 100,
-              text: "+",
-            ),
-            label: "Subscribers",
-          ),
-          NumericalHighlight(
-            counter: AnimatedCounter(
-              value: 100,
-              text: "+",
-            ),
-            label: "Subscribers",
-          ),
-          NumericalHighlight(
-            counter: AnimatedCounter(
-              value: 100,
-              text: "+",
-            ),
-            label: "Subscribers",
-          ),
-        ],
-      ),
     );
   }
 }
