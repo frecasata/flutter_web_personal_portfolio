@@ -22,17 +22,17 @@ class NumericalHighlights extends StatelessWidget {
                   children: [
                     NumericalHighlight(
                       counter: AnimatedCounter(
-                        value: 100,
+                        value: 5,
                         text: "+",
                       ),
-                      label: "Subscribers",
+                      label: "Years of Experience",
                     ),
                     NumericalHighlight(
                       counter: AnimatedCounter(
-                        value: 100,
+                        value: 20,
                         text: "+",
                       ),
-                      label: "Subscribers",
+                      label: "Coding Projects",
                     ),
                   ],
                 ),
@@ -42,17 +42,17 @@ class NumericalHighlights extends StatelessWidget {
                   children: [
                     NumericalHighlight(
                       counter: AnimatedCounter(
-                        value: 100,
-                        text: "+",
+                        value: 10,
+                        text: "K+",
                       ),
-                      label: "Subscribers",
+                      label: "Lines of Code Written",
                     ),
                     NumericalHighlight(
                       counter: AnimatedCounter(
-                        value: 100,
+                        value: 10,
                         text: "+",
                       ),
-                      label: "Subscribers",
+                      label: "Languages",
                     ),
                   ],
                 )
@@ -63,31 +63,31 @@ class NumericalHighlights extends StatelessWidget {
               children: [
                 NumericalHighlight(
                   counter: AnimatedCounter(
-                    value: 100,
+                    value: 5,
                     text: "+",
                   ),
-                  label: "Subscribers",
+                  label: "Years of Experience",
                 ),
                 NumericalHighlight(
                   counter: AnimatedCounter(
-                    value: 100,
+                    value: 20,
                     text: "+",
                   ),
-                  label: "Subscribers",
+                  label: "Coding Projects",
                 ),
                 NumericalHighlight(
                   counter: AnimatedCounter(
-                    value: 100,
-                    text: "+",
+                    value: 10,
+                    text: "K+",
                   ),
-                  label: "Subscribers",
+                  label: "Lines of Code Written",
                 ),
                 NumericalHighlight(
                   counter: AnimatedCounter(
-                    value: 100,
+                    value: 10,
                     text: "+",
                   ),
-                  label: "Subscribers",
+                  label: "Languages",
                 ),
               ],
             ),

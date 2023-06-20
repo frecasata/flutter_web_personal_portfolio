@@ -16,7 +16,7 @@ class MyInfo extends StatelessWidget {
             Spacer(flex: 2),
             CircleAvatar(
               radius: 50,
-              // backgroundImage: AssetImage("copy image relative path"),
+              backgroundImage: AssetImage("assets/images/profile.png"),
             ),
             Spacer(),
             Text(

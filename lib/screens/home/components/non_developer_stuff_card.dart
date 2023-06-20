@@ -22,16 +22,25 @@ class NonDeveloperStuffCard extends StatelessWidget {
         children: [
           Text(
             recommendation.name!,
+            maxLines: 1,
             style: Theme.of(context).textTheme.titleSmall,
+            overflow: TextOverflow.ellipsis,
           ),
-          Text(recommendation.source!),
           const SizedBox(height: defaultPadding),
           Text(
             recommendation.text!,
             maxLines: 4,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(height: 1.5),
-          )
+          ),
+          const SizedBox(height: defaultPadding),
+          TextButton(
+            onPressed: () {},
+            child: Text(
+              "Read More",
+              style: TextStyle(color: primaryColor),
+            ),
+          ),
         ],
       ),
     );

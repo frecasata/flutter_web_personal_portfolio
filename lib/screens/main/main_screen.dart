@@ -39,15 +39,18 @@ class MainScreen extends StatelessWidget {
                   flex: 2,
                   child: SideMenu(),
                 ),
-              SizedBox(width: defaultPadding),
+              SizedBox(width: defaultPadding / 2),
               // main
               Expanded(
                 flex: 7,
                 child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      ...children,
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: defaultPadding / 2),
+                    child: Column(
+                      children: [
+                        ...children,
+                      ],
+                    ),
                   ),
                 ),
               ),

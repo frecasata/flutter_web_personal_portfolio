@@ -83,10 +83,6 @@ class SideMenu extends StatelessWidget {
                             onPressed: () {},
                             icon: SvgPicture.asset("assets/icons/github.svg"),
                           ),
-                          IconButton(
-                            onPressed: () {},
-                            icon: SvgPicture.asset("assets/icons/twitter.svg"),
-                          ),
                           Spacer(),
                         ],
                       ),

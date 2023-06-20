@@ -26,10 +26,10 @@ class ProjectCard extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             style: Theme.of(context).textTheme.titleSmall,
           ),
-          Spacer(),
+          const SizedBox(height: defaultPadding),
           Text(
             project.description!,
-            maxLines: Responsive.isMobileLarge(context) ? 3 : 4,
+            maxLines: _getMaxLines(context),
             overflow: TextOverflow.ellipsis,
             style: TextStyle(height: 1.5),
           ),
@@ -44,5 +44,19 @@ class ProjectCard extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+int _getMaxLines(BuildContext context) {
+  if (Responsive.isMobile(context)) {
+    return 2;
+  } else if (Responsive.isMobileLarge(context)) {
+    return 4;
+  } else if (Responsive.isTablet(context)) {
+    return 3;
+  } else if (Responsive.isDesktop(context)) {
+    return 5;
+  } else {
+    return 4;
   }
 }

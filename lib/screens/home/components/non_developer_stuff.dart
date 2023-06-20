@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -39,4 +40,36 @@ class NonDeveloperStuff extends StatelessWidget {
       ),
     );
   }
+}
+
+class CustomScrollbarWithSingleChildScrollView extends StatelessWidget {
+  final Widget child;
+  final Axis scrollDirection;
+
+  const CustomScrollbarWithSingleChildScrollView(
+      {required this.child, required this.scrollDirection, Key? key})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ScrollConfiguration(
+      behavior: MyCustomScrollBehavior(),
+      child: Scrollbar(
+        child: SingleChildScrollView(
+          scrollDirection: scrollDirection,
+          child: child,
+        ),
+      ),
+    );
+  }
+}
+
+class MyCustomScrollBehavior extends MaterialScrollBehavior {
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+        PointerDeviceKind.stylus,
+        PointerDeviceKind.unknown,
+      };
 }

@@ -17,7 +17,7 @@ class HomeBanner extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Image.asset(
-            "name",
+            "assets/images/bg.jpeg",
             fit: BoxFit.cover,
           ),
           Container(
@@ -30,7 +30,7 @@ class HomeBanner extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Title \nTitle",
+                  "Take a look at my \ncreative endevoirs.",
                   style: Responsive.isDesktop(context)
                       ? Theme.of(context).textTheme.headlineLarge!.copyWith(
                             fontWeight: FontWeight.bold,
@@ -55,7 +55,10 @@ class HomeBanner extends StatelessWidget {
                         backgroundColor: primaryColor),
                     child: Text(
                       "EXPLORE NOW",
-                      style: TextStyle(color: darkColor),
+                      style: Theme.of(context)
+                          .textTheme
+                          .titleLarge!
+                          .copyWith(color: darkColor),
                     ),
                   ),
               ],
@@ -105,15 +108,15 @@ class AnimatedText extends StatelessWidget {
     return AnimatedTextKit(
       animatedTexts: [
         TyperAnimatedText(
-          "Animated Text",
+          "Dashboards",
           speed: Duration(milliseconds: 60),
         ),
         TyperAnimatedText(
-          "Text Text",
+          "Business Websites",
           speed: Duration(milliseconds: 60),
         ),
         TyperAnimatedText(
-          "Test Text",
+          "Business Apps",
           speed: Duration(milliseconds: 60),
         ),
       ],
@@ -131,7 +134,7 @@ class FlutterCodedText extends StatelessWidget {
     return Text.rich(
       TextSpan(text: "<", children: [
         TextSpan(
-          text: "flutter",
+          text: "web/mobile",
           style: TextStyle(color: primaryColor),
         ),
         TextSpan(text: ">"),
