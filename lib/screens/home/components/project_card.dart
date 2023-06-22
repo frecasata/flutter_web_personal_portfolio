@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_personal_portfolio/screens/read_more/project_details_screen.dart';
 
 import '../../../constants.dart';
 import '../../../models/Project.dart';
@@ -35,7 +36,13 @@ class ProjectCard extends StatelessWidget {
           ),
           Spacer(),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const ProjectDetailsScreen()),
+              );
+            }, //implement navigation to read more
             child: Text(
               "Read More",
               style: TextStyle(color: primaryColor),
