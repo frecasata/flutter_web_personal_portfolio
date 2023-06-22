@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/link.dart';
 
 import '../../../constants.dart';
 import '../../../responsive.dart';
@@ -46,19 +47,23 @@ class HomeBanner extends StatelessWidget {
                 MyBuildAnimatedText(),
                 SizedBox(height: defaultPadding),
                 if (!Responsive.isMobileLarge(context))
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: defaultPadding * 2,
-                            vertical: defaultPadding),
-                        backgroundColor: primaryColor),
-                    child: Text(
-                      "EXPLORE NOW",
-                      style: Theme.of(context)
-                          .textTheme
-                          .titleLarge!
-                          .copyWith(color: darkColor),
+                  Link(
+                    target: LinkTarget.self,
+                    uri: Uri.parse('https://www.instagram.com/neoreca86/'),
+                    builder: (context, followLink) => ElevatedButton(
+                      onPressed: followLink,
+                      style: TextButton.styleFrom(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: defaultPadding * 2,
+                              vertical: defaultPadding),
+                          backgroundColor: primaryColor),
+                      child: Text(
+                        "EXPLORE NOW",
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleLarge!
+                            .copyWith(color: darkColor),
+                      ),
                     ),
                   ),
               ],

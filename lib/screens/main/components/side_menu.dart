@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:url_launcher/link.dart';
 import 'skills_menu.dart';
 import '../../../constants.dart';
 import 'coding.dart';
@@ -75,13 +76,23 @@ class SideMenu extends StatelessWidget {
                       child: Row(
                         children: [
                           Spacer(),
-                          IconButton(
-                            onPressed: () {},
-                            icon: SvgPicture.asset("assets/icons/linkedin.svg"),
+                          Link(
+                            target: LinkTarget.self,
+                            uri: Uri.parse(
+                                'https://www.linkedin.com/in/franco-neo-recasata-7422aa272/'),
+                            builder: (context, followLink) => IconButton(
+                              onPressed: followLink,
+                              icon:
+                                  SvgPicture.asset("assets/icons/linkedin.svg"),
+                            ),
                           ),
-                          IconButton(
-                            onPressed: () {},
-                            icon: SvgPicture.asset("assets/icons/github.svg"),
+                          Link(
+                            target: LinkTarget.self,
+                            uri: Uri.parse('https://github.com/NeoRecasata'),
+                            builder: (context, followLink) => IconButton(
+                              onPressed: followLink,
+                              icon: SvgPicture.asset("assets/icons/github.svg"),
+                            ),
                           ),
                           Spacer(),
                         ],
