@@ -39,7 +39,7 @@ class SideMenu extends StatelessWidget {
                     ),
                     PersonalInfoText(
                       title: "Age",
-                      text: "21",
+                      text: "22",
                     ),
                     //Skills(),
                     SizedBox(

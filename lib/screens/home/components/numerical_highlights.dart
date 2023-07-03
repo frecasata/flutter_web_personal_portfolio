@@ -22,7 +22,7 @@ class NumericalHighlights extends StatelessWidget {
                   children: [
                     NumericalHighlight(
                       counter: AnimatedCounter(
-                        value: 5,
+                        value: 3,
                         text: "+",
                       ),
                       label: "Years of Experience",
@@ -63,7 +63,7 @@ class NumericalHighlights extends StatelessWidget {
               children: [
                 NumericalHighlight(
                   counter: AnimatedCounter(
-                    value: 5,
+                    value: 3,
                     text: "+",
                   ),
                   label: "Years of Experience",
