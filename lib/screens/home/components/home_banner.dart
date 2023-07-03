@@ -48,8 +48,9 @@ class HomeBanner extends StatelessWidget {
                 SizedBox(height: defaultPadding),
                 if (!Responsive.isMobileLarge(context))
                   Link(
-                    target: LinkTarget.self,
-                    uri: Uri.parse('https://www.instagram.com/neoreca86/'),
+                    target: LinkTarget.blank,
+                    uri: Uri.parse(
+                        'https://mediafiles.botpress.cloud/3adb806b-652d-4d53-8346-1375686bed42/webchat/bot.html'),
                     builder: (context, followLink) => ElevatedButton(
                       onPressed: followLink,
                       style: TextButton.styleFrom(
