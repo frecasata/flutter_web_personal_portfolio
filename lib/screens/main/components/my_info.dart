@@ -37,20 +37,25 @@ class MyInfo extends StatelessWidget {
             SizedBox(height: defaultPadding),
             Divider(),
             SizedBox(height: defaultPadding),
-            TextButton(
-              onPressed: () {},
-              child: FittedBox(
-                child: Row(
-                  children: [
-                    Text(
-                      "DOWNLOAD CV",
-                      style: TextStyle(
-                        color: Theme.of(context).textTheme.bodyMedium!.color,
+            Link(
+              target: LinkTarget.blank,
+              uri: Uri.parse(
+                  'https://drive.google.com/file/d/1AyCAu98jUJVxn8TSBeR88cC9-AqD5H9-/view?usp=sharing'),
+              builder: (context, followLink) => TextButton(
+                onPressed: followLink,
+                child: FittedBox(
+                  child: Row(
+                    children: [
+                      Text(
+                        "DOWNLOAD CV",
+                        style: TextStyle(
+                          color: Theme.of(context).textTheme.bodyMedium!.color,
+                        ),
                       ),
-                    ),
-                    SizedBox(width: defaultPadding / 2),
-                    SvgPicture.asset("assets/icons/download.svg"),
-                  ],
+                      SizedBox(width: defaultPadding / 2),
+                      SvgPicture.asset("assets/icons/download.svg"),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -61,7 +66,7 @@ class MyInfo extends StatelessWidget {
                 children: [
                   Spacer(),
                   Link(
-                    target: LinkTarget.self,
+                    target: LinkTarget.blank,
                     uri: Uri.parse(
                         'https://www.linkedin.com/in/franco-neo-recasata-7422aa272/'),
                     builder: (context, followLink) => IconButton(
@@ -70,7 +75,7 @@ class MyInfo extends StatelessWidget {
                     ),
                   ),
                   Link(
-                    target: LinkTarget.self,
+                    target: LinkTarget.blank,
                     uri: Uri.parse('https://github.com/NeoRecasata'),
                     builder: (context, followLink) => IconButton(
                       onPressed: followLink,
