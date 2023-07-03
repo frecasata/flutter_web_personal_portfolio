@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import '../../../constants.dart';
+import 'knowledge_text.dart';
 
 class Knowledge extends StatelessWidget {
   const Knowledge({
@@ -37,29 +37,6 @@ class Knowledge extends StatelessWidget {
         KnowledgeText(text: "Git Version Control"),
         KnowledgeText(text: "Linux"),
       ],
-    );
-  }
-}
-
-class KnowledgeText extends StatelessWidget {
-  const KnowledgeText({
-    super.key,
-    required this.text,
-  });
-
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: defaultPadding / 2),
-      child: Row(
-        children: [
-          SvgPicture.asset("assets/icons/check.svg"),
-          SizedBox(width: defaultPadding / 2),
-          Text(text),
-        ],
-      ),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_personal_portfolio/screens/home/components/my_work_experience.dart';
 import '../main/main_screen.dart';
 
 import 'components/home_banner.dart';
@@ -15,6 +16,7 @@ class HomeScreen extends StatelessWidget {
       children: [
         HomeBanner(),
         NumericalHighlights(),
+        MyWorkExperience(),
         MyProjects(),
         NonDeveloperStuff(),
       ],

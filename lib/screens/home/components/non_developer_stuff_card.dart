@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_personal_portfolio/screens/read_more/non_developer_stuff_details_screen.dart';
 
 import '../../../constants.dart';
 import '../../../models/NonDeveloperStuff.dart';
@@ -35,7 +36,15 @@ class NonDeveloperStuffCard extends StatelessWidget {
           ),
           const SizedBox(height: defaultPadding),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => NonDeveloperStuffDetailsScreen(
+                          nonDeveloperStuff: recommendation,
+                        )),
+              );
+            },
             child: Text(
               "Read More",
               style: TextStyle(color: primaryColor),

@@ -18,7 +18,7 @@ The professional home recording studio project has been a rewarding and ongoing 
 """,
   ),
   NonDeveloperStuff(
-    name: "Band (2019-Present)",
+    name: "Band (2019 - Present)",
     text:
         """Since 2019, I have been involved in a thrilling journey of forming and being a part of an indie band with my high school friends. Together, we have embarked on a creative endeavor that has allowed us to showcase our musical talents and pursue our passion for music.
 
@@ -35,7 +35,7 @@ Being a part of this band has been an incredibly fulfilling experience. It has a
   ),
   NonDeveloperStuff(
     name:
-        "Reverb Music Productions Talent member (instrumentalist) (2019 - present) - University Org",
+        "Reverb Music Productions Talent member (instrumentalist) (2019 - 2023) - University Org",
     text:
         """As a member, I have had the opportunity to hone my multi-instrumental skills. The organization has provided a platform for me to explore and master various musical instruments, expanding my repertoire and versatility. Through workshops, rehearsals, and collaborative performances, I have gained proficiency in playing different instruments, allowing me to contribute to diverse musical productions.
 

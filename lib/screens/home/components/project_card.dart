@@ -40,7 +40,9 @@ class ProjectCard extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const ProjectDetailsScreen()),
+                    builder: (context) => ProjectDetailsScreen(
+                          project: project,
+                        )),
               );
             }, //implement navigation to read more
             child: Text(

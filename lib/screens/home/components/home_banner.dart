@@ -18,7 +18,7 @@ class HomeBanner extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Image.asset(
-            "assets/images/bg.jpeg",
+            "assets/images/bg.png",
             fit: BoxFit.cover,
           ),
           Container(
@@ -58,7 +58,7 @@ class HomeBanner extends StatelessWidget {
                               vertical: defaultPadding),
                           backgroundColor: primaryColor),
                       child: Text(
-                        "EXPLORE NOW",
+                        "Ask PortfolioBot",
                         style: Theme.of(context)
                             .textTheme
                             .titleLarge!

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/link.dart';
-import 'skills_menu.dart';
 import '../../../constants.dart';
 import 'coding.dart';
 import 'knowledge.dart';
@@ -42,7 +41,7 @@ class SideMenu extends StatelessWidget {
                       title: "Age",
                       text: "21",
                     ),
-                    Skills(),
+                    //Skills(),
                     SizedBox(
                       height: defaultPadding,
                     ),
