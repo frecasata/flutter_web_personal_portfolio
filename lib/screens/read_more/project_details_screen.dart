@@ -3,6 +3,7 @@ import 'package:flutter_web_personal_portfolio/constants.dart';
 
 import '../../models/Project.dart';
 import '../../responsive.dart';
+import 'components/project_details_content.dart';
 
 class ProjectDetailsScreen extends StatelessWidget {
   ProjectDetailsScreen({super.key, required this.project});
@@ -40,58 +41,14 @@ class ProjectDetailsScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: defaultPadding * 2),
                       Responsive(
-                        mobile: Container(
-                          constraints: BoxConstraints(
-                              maxWidth:
-                                  400), // Set a maximum width for the container
-                          child: Text(
-                            project.description!,
-                            maxLines: _getMaxLines(context),
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(height: 2),
-                            textAlign: TextAlign
-                                .left, // Adjust the text alignment as needed
-                          ),
-                        ),
-                        mobileLarge: Container(
-                          constraints: BoxConstraints(
-                              maxWidth:
-                                  600), // Set a maximum width for the container
-                          child: Text(
-                            project.description!,
-                            maxLines: _getMaxLines(context),
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(height: 2),
-                            textAlign: TextAlign
-                                .left, // Adjust the text alignment as needed
-                          ),
-                        ),
-                        tablet: Container(
-                          constraints: BoxConstraints(
-                              maxWidth:
-                                  750), // Set a maximum width for the container
-                          child: Text(
-                            project.description!,
-                            maxLines: _getMaxLines(context),
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(height: 2),
-                            textAlign: TextAlign
-                                .left, // Adjust the text alignment as needed
-                          ),
-                        ),
-                        desktop: Container(
-                          constraints: BoxConstraints(
-                              maxWidth:
-                                  850), // Set a maximum width for the container
-                          child: Text(
-                            project.description!,
-                            maxLines: _getMaxLines(context),
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(height: 2),
-                            textAlign: TextAlign
-                                .left, // Adjust the text alignment as needed
-                          ),
-                        ),
+                        mobile: ProjectDetailsContent(
+                            project: project, maxWidth: 400),
+                        mobileLarge: ProjectDetailsContent(
+                            project: project, maxWidth: 600),
+                        tablet: ProjectDetailsContent(
+                            project: project, maxWidth: 750),
+                        desktop: ProjectDetailsContent(
+                            project: project, maxWidth: 850),
                       ),
                     ],
                   ),
@@ -102,19 +59,5 @@ class ProjectDetailsScreen extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  int _getMaxLines(BuildContext context) {
-    if (Responsive.isMobile(context)) {
-      return 100;
-    } else if (Responsive.isMobileLarge(context)) {
-      return 100;
-    } else if (Responsive.isTablet(context)) {
-      return 100;
-    } else if (Responsive.isDesktop(context)) {
-      return 100;
-    } else {
-      return 100;
-    }
   }
 }

@@ -3,6 +3,7 @@ import 'package:flutter_web_personal_portfolio/constants.dart';
 import 'package:flutter_web_personal_portfolio/models/WorkExperience.dart';
 
 import '../../responsive.dart';
+import 'components/work_experience_content.dart';
 
 class WorkExperienceScreen extends StatelessWidget {
   WorkExperienceScreen({super.key, required this.workExperience});
@@ -40,57 +41,21 @@ class WorkExperienceScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: defaultPadding * 2),
                       Responsive(
-                        mobile: Container(
-                          constraints: BoxConstraints(
-                              maxWidth:
-                                  400), // Set a maximum width for the container
-                          child: Text(
-                            workExperience.description!,
-                            maxLines: _getMaxLines(context),
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(height: 2),
-                            textAlign: TextAlign
-                                .left, // Adjust the text alignment as needed
-                          ),
+                        mobile: WorkExperienceContent(
+                          workExperience: workExperience,
+                          maxWidth: 400,
                         ),
-                        mobileLarge: Container(
-                          constraints: BoxConstraints(
-                              maxWidth:
-                                  600), // Set a maximum width for the container
-                          child: Text(
-                            workExperience.description!,
-                            maxLines: _getMaxLines(context),
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(height: 2),
-                            textAlign: TextAlign
-                                .left, // Adjust the text alignment as needed
-                          ),
+                        mobileLarge: WorkExperienceContent(
+                          workExperience: workExperience,
+                          maxWidth: 600,
                         ),
-                        tablet: Container(
-                          constraints: BoxConstraints(
-                              maxWidth:
-                                  750), // Set a maximum width for the container
-                          child: Text(
-                            workExperience.description!,
-                            maxLines: _getMaxLines(context),
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(height: 2),
-                            textAlign: TextAlign
-                                .left, // Adjust the text alignment as needed
-                          ),
+                        tablet: WorkExperienceContent(
+                          workExperience: workExperience,
+                          maxWidth: 750,
                         ),
-                        desktop: Container(
-                          constraints: BoxConstraints(
-                              maxWidth:
-                                  850), // Set a maximum width for the container
-                          child: Text(
-                            workExperience.description!,
-                            maxLines: _getMaxLines(context),
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(height: 2),
-                            textAlign: TextAlign
-                                .left, // Adjust the text alignment as needed
-                          ),
+                        desktop: WorkExperienceContent(
+                          workExperience: workExperience,
+                          maxWidth: 850,
                         ),
                       ),
                     ],
@@ -102,19 +67,5 @@ class WorkExperienceScreen extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  int _getMaxLines(BuildContext context) {
-    if (Responsive.isMobile(context)) {
-      return 100;
-    } else if (Responsive.isMobileLarge(context)) {
-      return 100;
-    } else if (Responsive.isTablet(context)) {
-      return 100;
-    } else if (Responsive.isDesktop(context)) {
-      return 100;
-    } else {
-      return 100;
-    }
   }
 }
