@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/link.dart';
 import '../../../constants.dart';
+import '../../../models/MyPersonalInfo.dart';
 import 'coding.dart';
 import 'knowledge.dart';
 import 'personal_info_text.dart';
@@ -39,7 +40,7 @@ class SideMenu extends StatelessWidget {
                     ),
                     PersonalInfoText(
                       title: "Age",
-                      text: "22",
+                      text: myInfo.age!,
                     ),
                     //Skills(),
                     SizedBox(

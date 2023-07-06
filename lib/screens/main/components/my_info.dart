@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/link.dart';
 import '../../../constants.dart';
+import '../../../models/MyPersonalInfo.dart';
 
 class MyInfo extends StatelessWidget {
   const MyInfo({
@@ -23,11 +24,11 @@ class MyInfo extends StatelessWidget {
             ),
             Spacer(),
             Text(
-              "Franco Neo Recasata",
+              myInfo.getFullName(),
               style: Theme.of(context).textTheme.titleSmall,
             ),
             Text(
-              "UA&P BSIT Student",
+              myInfo.subTitle!,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontWeight: FontWeight.w200,
